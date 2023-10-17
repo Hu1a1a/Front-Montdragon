@@ -77,14 +77,7 @@ body {
     }
     > .cardbody {
       position: relative;
-      background-color: steelblue;
-      padding: 2.5%;
-      @media only screen and (min-width: 762px) {
-        height: 330px;
-      }
-      @media only screen and (min-width: 1024px) {
-        height: 370px;
-      }
+      margin: 2.5%;
       > .cardTitle {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
@@ -163,5 +156,9 @@ footer {
 }
 
 .cardSelect {
-  outline: 5px solid red;
+  box-shadow: 0px 0px 10px 10px red;
+  z-index: 0;
+}
+.cardHide {
+  display: none;
 }
