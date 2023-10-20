@@ -13,21 +13,21 @@ body {
   background-color: tomato;
 }
 .navigators {
-  @media only screen and (min-width: 567px) {
+  @media (width>= 567px) {
     width: 50%;
     float: inline-start;
   }
-  @media only screen and (min-width: 762px) {
+  @media (width>= 762px) {
     width: 33%;
     float: inline-end;
   }
-  @media only screen and (min-width: 1024px) {
+  @media (width>= 1024px) {
     width: 100%;
   }
   .navigator {
     background-color: tomato;
     padding: 2.5%;
-    @media only screen and (min-width: 567px) {
+    @media (width< 567px) {
       height: 100%;
     }
     > button {
@@ -38,7 +38,7 @@ body {
       margin: 1% 0%;
       border: none;
       box-shadow: 3px 3px 5px black;
-      @media only screen and (min-width: 1024px) {
+      @media (width>= 1024px) {
         width: 14%;
         margin: 1%;
         padding: 1%;
@@ -49,41 +49,47 @@ body {
 }
 .cards {
   background-color: steelblue;
-
   display: table;
-  @media only screen and (min-width: 567px) {
+  width: 100%;
+  @media (width>= 567px) {
     width: 50%;
     float: inline-end;
   }
-  @media only screen and (min-width: 762px) {
+  @media (width>= 762px) {
     width: 66%;
     float: inline-start;
   }
-  @media only screen and (min-width: 1024px) {
+  @media (width>= 1024px) {
     width: 100%;
   }
   > .card {
-    @media only screen and (min-width: 762px) {
+    @media (width>= 762px) {
       width: 50%;
       float: left;
     }
-    @media only screen and (min-width: 1024px) {
+    @media (width>= 1024px) {
       width: 33.33333%;
       float: left;
     }
-    @media only screen and (min-width: 1200px) {
+    @media (width>= 1200px) {
       width: 25%;
       float: left;
     }
     > .cardbody {
       position: relative;
       margin: 2.5%;
+      width: 95%;
       > .cardTitle {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         background-color: lightgray;
         outline: 1px solid black;
+        width: 100%;
+        padding-top: 66.4%;
         > img {
+          position: absolute;
+          top: 0%;
+          left: 0%;
           width: 100%;
           object-fit: contain;
           border-top-left-radius: 15px;
@@ -93,9 +99,9 @@ body {
           position: absolute;
           top: 0%;
           left: 0%;
-          margin: 2.6%;
+          margin: 0%;
           padding: 2.5%;
-          width: 89.5%;
+          width: 95%;
           border-top-left-radius: 15px;
           border-top-right-radius: 15px;
           background-color: rgb(211, 211, 211, 0.5);
@@ -106,19 +112,19 @@ body {
         line-height: 40px;
         outline: 1px solid black;
         > span {
-          padding-left: 25px;
+          padding-left: 20px;
         }
       }
       > .cardFooter {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         padding: 25px;
-        @media only screen and (min-width: 567px) {
+        @media (width>= 567px) {
           padding-top: 60px;
         }
-        @media only screen and (min-width: 762px) {
-          padding-top: 60px;
-          padding-bottom: 20px;
+        @media (width>= 762px) {
+          padding-top: 80px;
+          padding-bottom: 40px;
           height: 40px;
         }
         > li {
@@ -127,13 +133,13 @@ body {
         }
       }
       > .cardContent1 {
-        @media only screen and (min-width: 567px) {
+        @media (width>= 567px) {
           width: 50%;
           float: left;
         }
       }
       > .cardContent2 {
-        @media only screen and (min-width: 567px) {
+        @media (width>= 567px) {
           width: 50%;
           float: right;
         }
@@ -144,13 +150,14 @@ body {
 
 footer {
   background-color: lightgray;
-  padding: 2%;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   > button {
-    width: 100%;
-    margin: 1% 0%;
-    @media only screen and (min-width: 567px) {
-      width: 32%;
+    width: 98%;
+    margin: 1% 1%;
+    @media (width>= 567px) {
+      width: 30%;
     }
   }
 }
@@ -161,4 +168,9 @@ footer {
 }
 .cardHide {
   display: none;
+}
+
+button,
+.card {
+  cursor: pointer;
 }
